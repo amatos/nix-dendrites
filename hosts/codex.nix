@@ -8,6 +8,7 @@ in {
         networking.hostName = "codex";
         nixpkgs.hostPlatform = "aarch64-darwin";
         system.stateVersion = 7;
+        system.primaryUser = (builtins.head assignedUsers).name;
 
         users.users = builtins.listToAttrs (map (u: {
           name = u.name;
