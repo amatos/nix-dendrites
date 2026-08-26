@@ -1,7 +1,8 @@
 {
   name = "alberth";
+  # Must match the pre-existing macOS account's uid (`id -u alberth`), or
+  # nix-darwin's declarative user management (users.knownUsers) skips it.
+  uid = 501;
   fullName = "Alberth Matos";
-  email = "alberth@matos.cc";
-  homeManagerRepo = "https://github.com/amatos/nix-home";
-  secretsRepo = "https://github.com/amatos/nix-secrets";
+  passwordSecret = "alberth-password";
 }

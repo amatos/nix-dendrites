@@ -1,22 +1,20 @@
-{ inputs, config, users, ... }:
-let
-  assignedUsers = [ users.alberth ];
-in {
+{ inputs, config, ... }: {
   flake.nixosConfigurations."ephemeraltron" = inputs.nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
-    modules = config.dendritic.sharedSystemConfig ++ [
+    modules = config.dendritic.sharedSystemConfig ++ config.dendritic.nixosSystemConfig ++ [
+      ../hardware/ephemeraltron.nix
       {
         networking.hostName = "ephemeraltron";
-        system.stateVersion = "26.05";
 
-        users.users = builtins.listToAttrs (map (u: {
-          name = u.name;
-          value = {
-            isNormalUser = true;
-            description = u.fullName;
-            home = "/home/${u.name}";
-          };
-        }) assignedUsers);
+        # EFI bootloader
+        boot.loader.systemd-boot.enable = true;
+        boot.loader.efi.canTouchEfiVariables = true;
+
+        # Timezone and locale
+        time.timeZone = "America/New_York";
+        i18n.defaultLocale = "en_US.UTF-8";
+
+        dendritic.isHeadless = true;
+        dendritic.isVirtual = true;
       }
     ];
   };

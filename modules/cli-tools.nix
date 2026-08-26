@@ -1,8 +1,7 @@
 { ... }: {
-  dendritic.userHomeConfig = [
+  dendritic.sharedSystemConfig = [
     ({ pkgs, ... }: {
-      home.packages = with pkgs; [
-        atuin
+      environment.systemPackages = with pkgs; [
         bat
         btop
         cowsay
@@ -11,6 +10,7 @@
         fastfetch
         fortune
         fzf
+        gnupg
         htop
         lsd
         pstree
@@ -21,6 +21,7 @@
         wget
         yazi
         zoxide
+        lsof
       ];
     })
   ];
