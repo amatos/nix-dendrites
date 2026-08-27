@@ -22,6 +22,7 @@
         yazi
         zoxide
         lsof
+        home-manager
       ];
     })
   ];
