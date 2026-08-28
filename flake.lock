@@ -196,11 +196,11 @@
     "nix-home": {
       "flake": false,
       "locked": {
-        "lastModified": 1787852770,
-        "narHash": "sha256-8S/wpn3Lr7j9AfOgrGU0hKI23QjsYEMTW4/hMCfgbs4=",
+        "lastModified": 1787927904,
+        "narHash": "sha256-ezO3qMJ8v3qvOHKodiYmTamEauODAJFsgllb4AK9VfQ=",
         "owner": "amatos",
         "repo": "nix-home",
-        "rev": "ccd3cbc54b7daa153c3ffb315f0a7494680f2322",
+        "rev": "5ac025a589dd31d90fc1450867541aba89946165",
         "type": "github"
       },
       "original": {
