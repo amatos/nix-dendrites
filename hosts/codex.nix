@@ -4,6 +4,7 @@
       {
         networking.hostName = "codex";
         dendritic.isSteamMachine = true;
+        dendritic.isObsMachine = true;
       }
     ];
   };

@@ -64,6 +64,15 @@
           hosts.
         '';
       };
+      options.dendritic.isObsMachine = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = ''
+          Whether this host runs OBS Studio. OBS Studio should only be installed on
+          OBS-designated hosts, and should not be installed on other
+          hosts.
+        '';
+      };
     })
   ];
 }
