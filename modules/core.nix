@@ -55,6 +55,15 @@
           special-casing hostnames.
         '';
       };
+      options.dendritic.isSteamMachine = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = ''
+          Whether this host runs Steam. Steam should only be installed on
+          Steam-compatible hosts, and should not be installed on other
+          hosts.
+        '';
+      };
     })
   ];
 }

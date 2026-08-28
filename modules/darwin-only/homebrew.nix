@@ -15,7 +15,6 @@
           { name = "dracula/install"; trusted = true; }
         ];
         casks = [
-          "steam"
           "tower"
           "gpg-suite@nightly"
           "vorssaint"
