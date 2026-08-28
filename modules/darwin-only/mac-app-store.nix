@@ -34,6 +34,7 @@
         "LanguageTool" = 1534275760;
         "Logic Pro" = 1615087040;
         "MainStage" = 6746637089;
+        "Mela" = 1568924476;
         "Microsoft Excel" = 462058435;
         "Microsoft PowerPoint" = 462062816;
         "Microsoft Word" = 462054704;
