@@ -19,7 +19,7 @@
         };
       in {
         system.activationScripts.postActivation.text = ''
-          installedTeXShopVersion=$(/usr/sbin/pkgutil --pkg-info org.tug.mactex.texshopliquidglass 2>/dev/null | awk '/^version:/ {print $2}')
+          installedTeXShopVersion=$(/usr/sbin/pkgutil --pkg-info org.tug.mactex.texshopliquidglass 2>/dev/null | awk '/^version:/ {print $2}') || true
           if [ "$installedTeXShopVersion" != "${texshopVersion}" ]; then
             echo "installing TeXShop (Liquid Glass) ${texshopVersion}..." >&2
             /usr/sbin/installer -pkg ${texshopPkg} -target /
