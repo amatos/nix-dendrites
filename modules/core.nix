@@ -73,6 +73,13 @@
           hosts.
         '';
       };
+      options.dendritic.isDevDesktop = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = ''
+          Whether this host is a development desktop.
+        '';
+      };
     })
   ];
 }
