@@ -25,6 +25,7 @@ in {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.backupFileExtension = "backup";
+      home-manager.extraSpecialArgs = { inherit (inputs) nix-secrets; };
       home-manager.users = builtins.listToAttrs (map (u: {
         name = u.name;
         value = {
