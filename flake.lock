@@ -196,11 +196,11 @@
     "nix-home": {
       "flake": false,
       "locked": {
-        "lastModified": 1787929166,
-        "narHash": "sha256-7J6EnKkhh14RMofrolxBJtI01CLfHkrtAtyWEAZJz/c=",
+        "lastModified": 1787973832,
+        "narHash": "sha256-GVrFaRu9r8HSU1Z38t5m8CluBjX17YvxaHJyZcJM+NU=",
         "owner": "amatos",
         "repo": "nix-home",
-        "rev": "b293f2e183ee1d2f02387a82dab026ecdbe90f64",
+        "rev": "7b3f8b59143cbcc9388d5e5040f20d3c2bd9af19",
         "type": "github"
       },
       "original": {
@@ -235,11 +235,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1787785172,
-        "narHash": "sha256-8eveEYv4MQzoi38ol03P7lqJrp7GwOaHCDnRErgZGzE=",
+        "lastModified": 1787973157,
+        "narHash": "sha256-nX+7GLd6ShSiTiy4VhPpVWkNZLqoZ/ZXHpP9eEDL5G4=",
         "owner": "amatos",
         "repo": "nix-secrets",
-        "rev": "181bbf294a34df74c42aa7c14113cb59fdca3970",
+        "rev": "955e4260dcec992598413cae36e460b56c53ef4a",
         "type": "github"
       },
       "original": {
