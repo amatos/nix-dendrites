@@ -7,7 +7,6 @@
         maven3
         gradle
         groovy
-        jenv
         plantuml
       ];
     })
