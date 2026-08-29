@@ -44,7 +44,7 @@
         "OneDrive" = 823766827;
         "Pages" = 361309726;
         "Pastel" = 413897608;
-        "PastePal" = 1503446680;
+        "Paste" = 967805235;
         "Photomator" = 1444636541;
         "Pixelmator Pro" = 6746662575;
         "Privacy.com for Safari" = 6449850851;
