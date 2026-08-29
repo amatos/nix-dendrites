@@ -6,6 +6,7 @@
         dendritic.isSteamMachine = true;
         dendritic.isObsMachine = true;
         dendritic.isDevDesktop = true;
+        dendritic.isHomeManagerEnabled = true;
       }
     ];
   };

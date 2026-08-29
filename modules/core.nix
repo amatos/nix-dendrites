@@ -80,6 +80,15 @@
           Whether this host is a development desktop.
         '';
       };
+      options.dendritic.isHomeManagerEnabled = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = ''
+          Whether this host pulls in the home-manager configuration.
+          Home-manager should only be configured on hosts where this is
+          true, instead of being pulled in unconditionally.
+        '';
+      };
     })
   ];
 }

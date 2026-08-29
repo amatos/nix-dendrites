@@ -1,5 +1,6 @@
 { inputs, config, users, ... }:
 let
+  flakeConfig = config;
   assignedUsers = [ users.alberth ];
 in {
   dendritic.darwinSystemConfig = [
@@ -19,14 +20,15 @@ in {
           home = "/Users/${u.name}";
         };
       }) assignedUsers);
-
+    })
+    ({ config, lib, ... }: lib.mkIf config.dendritic.isHomeManagerEnabled {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.backupFileExtension = "backup";
       home-manager.users = builtins.listToAttrs (map (u: {
         name = u.name;
         value = {
-          imports = config.dendritic.userHomeConfig ++ (map (f: f u) config.dendritic.userHomeConfigFor);
+          imports = flakeConfig.dendritic.userHomeConfig ++ (map (f: f u) flakeConfig.dendritic.userHomeConfigFor);
           home.stateVersion = "26.05";
         };
       }) assignedUsers);
