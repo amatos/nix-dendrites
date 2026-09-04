@@ -5,6 +5,9 @@
 # dns-lexicon-based plugins, e.g. certbot-dns-ovh) instead of pinning a
 # separate tag, so the plugin never drifts out of sync with whatever
 # certbot/acme version is actually installed alongside it.
+#
+# run `certbot certonly --dns-luadns --dns-luadns-credentials /run/agenix/certbot-luadns -d <your domain>` to generate the first certificate.
+
 {
   buildPythonPackage,
   certbot,
